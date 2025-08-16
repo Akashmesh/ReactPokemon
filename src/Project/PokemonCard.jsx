@@ -10,23 +10,25 @@ export const PokemonCard = ({pokemonData}) => {
                 <p>{pokemonData.types.map((curType)=> curType.type.name)}</p>
             </div>
             <div className="grid-three-cols">
-                <p className="pokemon-info"><span>Height :</span>{pokemonData.height}</p>
-                <p className="pokemon-info"><span>Weight :</span>{pokemonData.weight}</p>
-                <p className="pokemon-info"><span>Speed :</span>{pokemonData.stats[5].base_stat}</p>
+                <p className="pokemon-info"><span>Height</span>{pokemonData.height}</p>
+                <p className="pokemon-info"><span>Weight</span>{pokemonData.weight}</p>
+                <p className="pokemon-info"><span>Speed</span>{pokemonData.stats[5].base_stat}</p>
 
             </div>
              <div className="grid-three-cols">
               <div className="pokemon-info">
+                <span>Experience</span>
                 <p>{pokemonData.base_experience}</p>
-                <span>Experience :</span>
+                
               </div>
               <div className="pokemon-info">
+                <span>Attack</span>
                 <p>{pokemonData.stats[1].base_stat}</p>
-                <span>Attack :</span>
+                
                 </div>
-                 <div className="pokemon-info">
+                 <div className="pokemon-info abhover">
+                <span>Abilities</span>
                 <p>{pokemonData.abilities.map((abilityInfo)=> abilityInfo.ability.name).slice(0,1).join(",")}</p>
-                <span>Abilities :</span>
                 </div>
 
 

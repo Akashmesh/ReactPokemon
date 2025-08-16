@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react"
-import {PokemonCard} from './PokemonCard'
-;
+import {PokemonCard} from './PokemonCard';
+import "./pokemon.css";
 export const Pokemon =() => {
     const[pokemon, setPokemon]= useState([]);
     const[loading, setLoading]= useState(true);
     const[error, setError] = useState(null);
     const[search, setSearch]= useState("");
 
-    const API = "https:pokeapi.co/api/v2/pokemon?limit=124";
+    const API = "https:pokeapi.co/api/v2/pokemon?limit=40";
 
     const fetchPokemon= async() => {
         try {
@@ -53,7 +53,7 @@ export const Pokemon =() => {
                 <h1>Let's Catch Pokemon</h1>
             </header>
             <div className="pokemon-search">
-                <input type="text" placeholder="search pokemon" value={search} onChange={(e)=> e.target.value}/>
+                <input type="text" placeholder="search pokemon" value={search} onChange={(e)=> setSearch(e.target.value)}/>
             </div>
             <div><ul className="cards"> {searchData.map((curPokemon)=> {
                 return(

@@ -1,0 +1,166 @@
+/* ===== GLOBAL STYLES ===== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #fffbea, #ffe259);
+  color: #222;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+
+/* ===== SEARCH BAR ===== */
+.pokemon-search {
+  margin-bottom: 2rem;
+}
+
+.pokemon-search input {
+  width: 90%;
+  max-width: 400px;
+  padding: 12px 16px;
+  border-radius: 30px;
+  border: 2px solid #ffd700;
+  background: #fff;
+  color: #222;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+.pokemon-search input:focus {
+  border-color: #ffae00;
+  box-shadow: 0 0 12px #ffd70066;
+}
+
+/* ===== GRID ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+/* ===== POKEMON CARD ===== */
+.pokemon-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  border: 2px solid #ffd70044;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  border-color: #ffd700;
+}
+
+/* Pokémon image */
+.pokemon-card figure {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pokemon-image {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.pokemon-card:hover .pokemon-image {
+  transform: scale(1.1);
+}
+
+/* Pokémon name */
+.pokemon-name {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0.8rem 0;
+  color: #222;
+}
+
+/* Pokémon type badge */
+.pokemon-highlight {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: #ffd700;
+  color: #222;
+  text-transform: capitalize;
+}
+
+/* ===== FIXED INFO STYLING ===== */
+/* Grid layout for stats */
+.grid-three-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+/* Pokémon info box */
+.pokemon-info {
+  background: #fff9e6;
+  border: 1px solid #ffd70099;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+
+  /* Fix alignment */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* Prevent overflow */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+/* Label inside info */
+.pokemon-info span {
+  display: block;
+  font-weight: 700;
+  color: #ff9800;
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Value inside info */
+.pokemon-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
